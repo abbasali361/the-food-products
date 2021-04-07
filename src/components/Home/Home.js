@@ -8,7 +8,7 @@ const Home = () => {
 
   const [products, setProducts] = useState([]);
   console.log("get products", products);
-  const url = `http://localhost:6600/products`;
+  const url = `https://the-food-store.herokuapp.com/products`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

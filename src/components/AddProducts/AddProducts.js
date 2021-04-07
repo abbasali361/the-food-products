@@ -13,7 +13,7 @@ const AddProducts = () => {
       price: data.price,
       imageURL: imageURL
     };
-    const url = `http://localhost:6600/addProducts`;
+    const url = `https://the-food-store.herokuapp.com/addProducts`;
 
   
     fetch(url, {

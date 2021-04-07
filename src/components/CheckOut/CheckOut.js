@@ -8,7 +8,7 @@ const CheckOut = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:6600/checkOut/${id}`)
+    fetch(`https://the-food-store.herokuapp.com/checkOut/${id}`)
       .then((res) => res.json())
       .then((result) => {
         setProduct(result);
@@ -26,7 +26,7 @@ const CheckOut = () => {
     };
 
 
-    fetch("http://localhost:6600/addOrder", {
+    fetch("https://the-food-store.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

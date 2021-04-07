@@ -4,7 +4,7 @@ import ManageDetails from '../ManageDetails/ManageDetails';
 
 const ManageProduct = () => {
     const [manageProducts, setManageProducts] = useState([])
-    const url = `http://localhost:6600/products`;
+    const url = `https://the-food-store.herokuapp.com/products`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

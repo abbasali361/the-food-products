@@ -6,7 +6,7 @@ const ManageDetails = (props) => {
   const [updateEvent, setUpdateEvent] = useState({});
   console.log("get delete ", updateEvent);
   const handleDeleteProduct = (id) => {
-    fetch(`http://localhost:6600/deleteProduct/${id}`, {
+    fetch(`https://the-food-store.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
