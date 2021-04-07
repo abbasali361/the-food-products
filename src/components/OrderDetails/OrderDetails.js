@@ -4,7 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 
 const OrderDetails = (props) => {
     const user = props.user;
-    const { name, price, quality, imageURL, email } = user;
+    const { name, price, quality, imageURL, email,orderTime } = user;
     
     return (
         <div>
@@ -19,7 +19,9 @@ const OrderDetails = (props) => {
                     <Card.Text>
                         {price}
                     </Card.Text>
-                    <Button variant="primary">Buy Now</Button>
+                    <Card.Text>
+                        {orderTime}
+                    </Card.Text>
                 </Card.Body>
             </Card>
         </div>
