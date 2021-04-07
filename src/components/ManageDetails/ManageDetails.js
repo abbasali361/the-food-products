@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdDelete } from "react-icons/md";
 
 const ManageDetails = (props) => {
   const products = props.products;
@@ -26,7 +27,7 @@ const ManageDetails = (props) => {
             <td>{quality}</td>
             <td>{price}</td>
             <td>
-              <button onClick={() => handleDeleteProduct(_id)}>delete</button>
+              <button onClick={() => handleDeleteProduct(_id)}><MdDelete/></button>
             </td>
           </tr>
         </tbody>

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { MdShoppingCart } from "react-icons/md";
 
 const Cart = (props) => {
   const product = props.product;
@@ -19,7 +20,7 @@ const Cart = (props) => {
           <Card.Text>${price}</Card.Text>
           <Link to={`/checkOut/${_id}`}>
             <Button variant="primary" onClick={() => handleBuyProduct(_id)}>
-              Buy Now
+            <MdShoppingCart/>  Buy Now
             </Button>
           </Link>
         </Card.Body>
