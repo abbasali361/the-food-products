@@ -1,17 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { UserContext } from '../../App';
+
 
 const OrderDetails = (props) => {
     const user = props.user;
     const { name, price, quality, imageURL, email } = user;
-    const [loggedInUser, setLoggedInUser]=useContext(UserContext)
+    
     return (
         <div>
-            <div>
-                <h1>Hi... {loggedInUser.name} Welcome!!!!</h1>
-                <p>Email: {loggedInUser.email}</p>
-            </div>
+            
             <Card >
                 <Card.Img variant="top" src={imageURL} />
                 <Card.Body>
