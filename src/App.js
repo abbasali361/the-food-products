@@ -15,7 +15,7 @@ import Admin from './components/Admin/Admin';
 import Orders from './components/Orders/Orders';
 import Login from './components/Login/Login';
 import CheckOut from './components/CheckOut/CheckOut';
-import TopHeader from './components/TopHeader/TopHeader'
+import TopHeader from './components/TopHeader/TopHeader';
 export const UserContext = createContext();
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
         <Router>
           <TopHeader></TopHeader>
-
+          <h1>The Food Store</h1>
           <Switch>
             <Route exact path="/">
               <Home></Home>

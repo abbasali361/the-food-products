@@ -4,24 +4,17 @@ import { Button, Card } from 'react-bootstrap';
 
 const OrderDetails = (props) => {
     const user = props.user;
-    const { name, price, quality, imageURL, email,orderTime } = user;
-    
+    const { name, price, quality, imageURL, orderTime } = user;
+
     return (
         <div>
-            
             <Card >
                 <Card.Img variant="top" src={imageURL} />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        {quality}
-                    </Card.Text>
-                    <Card.Text>
-                        {price}
-                    </Card.Text>
-                    <Card.Text>
-                        {orderTime}
-                    </Card.Text>
+                    <Card.Title><h1>{name}</h1></Card.Title>
+                    <Card.Text>quality: {quality}</Card.Text>
+                    <Card.Text>price: {price}</Card.Text>
+                    <Button variant="primary">{orderTime}</Button>
                 </Card.Body>
             </Card>
         </div>

@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 const Admin = () => {
     return (
         <div>
-             <Header></Header>
+            <Header></Header>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import Cart from '../Cart/Cart';
 
+
 const Home = () => {
   document.title = "Home";
 
@@ -25,7 +26,6 @@ const Home = () => {
         }
       </div>
       <div className="row">
-
         {products.map((product) => (<Cart key={product._id} product={product}></Cart>))}
       </div>
     </div>

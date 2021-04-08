@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../App";
 import firebaseConfig from "./firebase.config";
+import { FaGofore } from "react-icons/fa";
+
 
 // Initialize Firebase
 if (!firebase.apps.length) {
@@ -35,7 +37,7 @@ const Login = () => {
 
   
   return <div>
-    <button onClick={handleGoogleSignIn}>Sign with Google</button>
+    <button className="btn btn-primary" onClick={handleGoogleSignIn}> <FaGofore/> Sign with Google</button>
   </div>;
 };
 

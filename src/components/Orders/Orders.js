@@ -13,14 +13,17 @@ const Orders = () => {
         })
     },[])
     return (
-        <div>
+        <div class="row justify-content-md-center">
             <div>
                 <h1>Hi... {loggedInUser.name} Welcome!!!!</h1>
                 <p>Email: {loggedInUser.email}</p>
             </div>
+            <div class="col col-lg-8">
             {
-                order.map(user=> <OrderDetails key={user.id} user={user}></OrderDetails>)
+                order.map(user=> <OrderDetails key={user._id} user={user}></OrderDetails>)
             }
+            </div>
+           
         </div>
     );
 };

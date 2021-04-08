@@ -42,29 +42,36 @@ const CheckOut = () => {
   };
 
   return (
-    <div>
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-4">
       <h1>{loggedInUser.name}</h1>
-      <table>
+      <table class="table table-bordered table-success">
         <thead>
-          <tr className="row">
-            <th className="col-md-3">name</th>
-            <th className="col-md-3">quality</th>
-            <th className="col-md-3">Price</th>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">quality</th>
+            <th scope="col">Price</th>
+
           </tr>
         </thead>
         <tbody>
           <tr>
+            <th scope="row">1</th>
             <td>{name}</td>
             <td>{quality}</td>
-            <td>{price}</td>
+            <td>$ {price}</td>
+
           </tr>
           <tr>
-            <td>Total</td>
-            <td>{price}</td>
+            <th scope="row">3</th>
+            <td colspan="2">Total</td>
+            <td>$ {price}</td>
           </tr>
         </tbody>
       </table>
-      <button onClick={handleCheckOut}>Check Out</button>
+      <button class="btn btn-outline-success" onClick={handleCheckOut}>Check Out</button>
+      </div>
     </div>
   );
 };

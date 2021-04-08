@@ -17,15 +17,6 @@ const ManageProduct = () => {
             <div>
                 <Header></Header>
                 <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Product Name</th>
-                                <th>Product quality</th>
-                                <th>Product Price</th>
-                            </tr>
-                        </thead>
-                    </table>
                     {
                         manageProducts.map(pd => <ManageDetails key={pd._id} products={pd}></ManageDetails>)
                     }
